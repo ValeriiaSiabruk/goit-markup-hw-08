@@ -1,0 +1,19 @@
+.logo {
+  margin-right: 93px;
+  font-family: var(--font-logo);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.192;
+  color: var(--black);
+
+  span {
+    color: var(--blue);
+  }
+}
+
+.logo--white {
+  display: inline-block;
+  margin-right: 0;
+  margin-bottom: 20px;
+  color: var(--white);
+}
