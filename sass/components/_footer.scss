@@ -74,9 +74,10 @@
   }
 
   @media screen and (min-width: $screen-lg-min) {
+    flex-basis: auto;
     margin-right: 93px;
     margin-bottom: 0;
-    flex-basis: auto;
+    text-align: left;
   }
 }
 

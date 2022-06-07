@@ -1344,10 +1344,11 @@ img {
 
 @media screen and (min-width: 1200px) {
   .footer__action {
-    margin-right: 93px;
-    margin-bottom: 0;
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
+    margin-right: 93px;
+    margin-bottom: 0;
+    text-align: left;
   }
 }
 
