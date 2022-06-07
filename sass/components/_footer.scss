@@ -5,16 +5,36 @@
 }
 
 .footer__wrapper {
-  display: flex;
-  align-items: baseline;
+  @media screen and (min-width: $screen-md-min) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: $screen-lg-min) {
+    align-items: baseline;
+    flex-wrap: nowrap;
+  }
 }
 
 .footer__information {
-  margin-right: 70px;
+  margin-bottom: 60px;
+  text-align: center;
+
+  @media screen and (min-width: $screen-md-min) {
+    flex-basis: 50%;
+  }
+
+  @media screen and (min-width: $screen-lg-min) {
+    margin-right: 70px;
+    margin-bottom: 0;
+    flex-basis: auto;
+    text-align: left;
+  }
 }
 
 .footer__address {
-  display: flex;
+  @media screen and (min-width: $screen-lg-min) {
+  }
 }
 
 .footer__address-item:not(:last-child) {
@@ -28,7 +48,6 @@
 }
 
 .footer__contacts-link {
-  display: flex;
   align-items: center;
   font-style: normal;
   font-weight: 400;
@@ -40,10 +59,25 @@
   &:focus {
     color: var(--blue);
   }
+
+  @media screen and (min-width: $screen-lg-min) {
+    display: flex;
+  }
 }
 
 .footer__action {
-  margin-right: 93px;
+  text-align: center;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: $screen-md-min) {
+    flex-basis: 50%;
+  }
+
+  @media screen and (min-width: $screen-lg-min) {
+    margin-right: 93px;
+    margin-bottom: 0;
+    flex-basis: auto;
+  }
 }
 
 .footer__action-title {
@@ -53,6 +87,22 @@
   letter-spacing: 0.03em;
   color: var(--white);
   text-transform: uppercase;
+}
+
+.footer__form {
+  text-align: center;
+
+  @media screen and (min-width: $screen-md-min) {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+  }
+
+  @media screen and (min-width: $screen-lg-min) {
+    display: block;
+    flex-basis: auto;
+    text-align: left;
+  }
 }
 
 .footer__form-title {
@@ -65,12 +115,15 @@
 }
 
 .footer__form-subscribe {
-  display: flex;
+  @media screen and (min-width: $screen-lg-min) {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .footer__subscribe-input {
-  width: 358px;
-  margin-right: 12px;
+  width: 100%;
+  margin-bottom: 20px;
   border: 1px solid var(--footer-input-border);
   border-radius: 4px;
   padding: 16px 15px;
@@ -89,6 +142,18 @@
     line-height: 1.25;
     letter-spacing: 0.03em;
     color: var(--transparent-gray);
+  }
+
+  @media screen and (min-width: $screen-md-min) {
+    display: block;
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: $screen-lg-min) {
+    width: 358px;
+    margin-right: 12px;
   }
 }
 

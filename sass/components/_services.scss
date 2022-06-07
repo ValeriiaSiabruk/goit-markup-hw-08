@@ -1,5 +1,9 @@
 .services {
   padding-top: 0;
+
+  @media screen and (max-width: $screen-lg-max) {
+    display: none;
+  }
 }
 
 .services__list {
@@ -8,10 +12,21 @@
 
 .services__list-item {
   position: relative;
+  flex-basis: 100%;
 
   &:not(:last-child) {
     margin-right: 30px;
   }
+}
+
+.services__img-wrapper {
+  background-color: var(--image-placeholder);
+  aspect-ratio: 370 / 294;
+}
+
+.services__list-img {
+  object-fit: cover;
+  height: 100%;
 }
 
 .services__list-text {

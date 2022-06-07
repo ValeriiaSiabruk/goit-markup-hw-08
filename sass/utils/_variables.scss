@@ -4,6 +4,7 @@
   --hero-button-hover: #188ce8;
   --icon: #afb1b8;
   --services-list-text: rgba(47, 48, 58, 0.8);
+  --image-placeholder: #eeeeee;
   --works-overlay: rgba(33, 150, 243, 0.9);
   --social-link-icon-background: rgba(255, 255, 255, 0.1);
   --footer-input-border: rgba(255, 255, 255, 0.3);
@@ -23,3 +24,10 @@
   --font: 'Roboto', sans-serif;
   --font-logo: 'Raleway';
 }
+
+$screen-sm-min: 480px;
+$screen-md-min: 768px;
+$screen-lg-min: 1200px;
+$screen-sm-max: 479px;
+$screen-md-max: 767px;
+$screen-lg-max: 1199px;

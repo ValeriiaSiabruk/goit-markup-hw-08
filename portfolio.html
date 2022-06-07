@@ -17,10 +17,81 @@
       <div class="container header__container">
         <nav class="header__navigation">
           <a class="logo" href="./index.html"><span>Web</span>Studio</a>
+          <button
+            class="burger__button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="burger__container"
+            data-menu-button
+          >
+            <svg
+              class="burger__icons"
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use class="burger__icon-menu" href="./images/symbol-defs.svg#icon-menu-burger" />
+              <use
+                class="burger__icon-cross"
+                href="./images/symbol-defs.svg#icon-menu-burger-cross"
+              />
+            </svg>
+          </button>
+          <div class="burger__container" id="burger__container" data-menu>
+            <ul class="burger__navigation">
+              <li class="burger__navigation-item">
+                <a class="burger__navigation-link" href="./index.html">Студия</a>
+              </li>
+
+              <li class="burger__navigation-item">
+                <a
+                  class="burger__navigation-link burger__navigation-link--current"
+                  href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+
+              <li class="burger__navigation-item">
+                <a href="#" class="burger__navigation-link">Контакты</a>
+              </li>
+            </ul>
+
+            <ul class="burger__contacts">
+              <li class="burger__contacts-item">
+                <a class="burger__contacts-phone" href="tel:+380961111111">+38 096 111 11 11</a>
+              </li>
+
+              <li class="burger__contacts-item">
+                <a class="burger__contacts-mail" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+
+            <ul class="burger__social">
+              <li class="burger__social-wrapper">
+                <a class="burger__social-link" href="#!" aria-label="Инстаграм"> Instagram </a>
+              </li>
+
+              <li class="burger__social-wrapper">
+                <a class="burger__social-link" href="#!" aria-label="Твиттер"> Twitter </a>
+              </li>
+
+              <li class="burger__social-wrapper">
+                <a class="burger__social-link" href="#!" aria-label="Фейсбук"> Facebook </a>
+              </li>
+
+              <li class="burger__social-wrapper">
+                <a class="burger__social-link" href="#!" aria-label="Линкедин"> LinkedIn </a>
+              </li>
+            </ul>
+          </div>
+
           <ul class="header__navigation-list">
             <li class="header__navigation-item">
               <a class="header__navigation-link" href="./index.html">Студия</a>
             </li>
+
             <li class="header__navigation-item">
               <a
                 class="header__navigation-link header__navigation-link--current"
@@ -28,6 +99,7 @@
                 >Портфолио</a
               >
             </li>
+
             <li class="header__navigation-item">
               <a href="#" class="header__navigation-link">Контакты</a>
             </li>
@@ -62,11 +134,9 @@
             <li class="projects__tab-item">
               <button class="button button--active button--light" type="button">Все</button>
             </li>
-
             <li class="projects__tab-item">
               <button class="button button--light" type="button">Веб-сайты</button>
             </li>
-
             <li class="projects__tab-item">
               <button class="button button--light" type="button">Приложения</button>
             </li>
@@ -84,13 +154,37 @@
             <li class="projects__list-card">
               <a class="projects__list-item" href="#!">
                 <div class="projects__img-wrapper">
-                  <img
-                    class="projects__img"
-                    src="./images/portfolio-img-1.jpg"
-                    alt="Веб-сайт"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-1-lg.jpg    1x,
+                        ./images/portfolio/portfolio-img-1-lg@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-1-md.jpg    1x,
+                        ./images/portfolio/portfolio-img-1-md@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-1-sm.jpg    1x,
+                        ./images/portfolio/portfolio-img-1-sm@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="projects__img"
+                      src="./images/portfolio/portfolio-img-1-sm.jpg"
+                      alt="Веб-сайт"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <p class="projects__list-overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -107,13 +201,37 @@
             <li class="projects__list-card">
               <a class="projects__list-item" href="#!">
                 <div class="projects__img-wrapper">
-                  <img
-                    class="projects__img"
-                    src="./images/portfolio-img-2.jpg"
-                    alt="Дизайн"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-2-lg.jpg    1x,
+                        ./images/portfolio/portfolio-img-2-lg@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-2-md.jpg    1x,
+                        ./images/portfolio/portfolio-img-2-md@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-2-sm.jpg    1x,
+                        ./images/portfolio/portfolio-img-2-sm@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="projects__img"
+                      src="./images/portfolio/portfolio-img-2-sm.jpg"
+                      alt="Дизайн"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <p class="projects__list-overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -130,13 +248,37 @@
             <li class="projects__list-card">
               <a class="projects__list-item" href="#!">
                 <div class="projects__img-wrapper">
-                  <img
-                    class="projects__img"
-                    src="./images/portfolio-img-3.jpg"
-                    alt="Приложение"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-3-lg.jpg    1x,
+                        ./images/portfolio/portfolio-img-3-lg@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-3-md.jpg    1x,
+                        ./images/portfolio/portfolio-img-3-md@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-3-sm.jpg    1x,
+                        ./images/portfolio/portfolio-img-3-sm@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="projects__img"
+                      src="./images/portfolio/portfolio-img-3-sm.jpg"
+                      alt="Приложение"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <p class="projects__list-overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -153,13 +295,37 @@
             <li class="projects__list-card">
               <a class="projects__list-item" href="#!">
                 <div class="projects__img-wrapper">
-                  <img
-                    class="projects__img"
-                    src="./images/portfolio-img-4.jpg"
-                    alt="Маркетинг"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-4-lg.jpg    1x,
+                        ./images/portfolio/portfolio-img-4-lg@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-4-md.jpg    1x,
+                        ./images/portfolio/portfolio-img-4-md@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-4-sm.jpg    1x,
+                        ./images/portfolio/portfolio-img-4-sm@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="projects__img"
+                      src="./images/portfolio/portfolio-img-4-sm.jpg"
+                      alt="Маркетинг"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <p class="projects__list-overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -176,13 +342,37 @@
             <li class="projects__list-card">
               <a class="projects__list-item" href="#!">
                 <div class="projects__img-wrapper">
-                  <img
-                    class="projects__img"
-                    src="./images/portfolio-img-5.jpg"
-                    alt="Приложение"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-5-lg.jpg    1x,
+                        ./images/portfolio/portfolio-img-5-lg@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-5-md.jpg    1x,
+                        ./images/portfolio/portfolio-img-5-md@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-5-sm.jpg    1x,
+                        ./images/portfolio/portfolio-img-5-sm@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="projects__img"
+                      src="./images/portfolio/portfolio-img-5-sm.jpg"
+                      alt="Приложение"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <p class="projects__list-overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -199,13 +389,37 @@
             <li class="projects__list-card">
               <a class="projects__list-item" href="#!">
                 <div class="projects__img-wrapper">
-                  <img
-                    class="projects__img"
-                    src="./images/portfolio-img-6.jpg"
-                    alt="Веб-сайт"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-6-lg.jpg    1x,
+                        ./images/portfolio/portfolio-img-6-lg@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-6-md.jpg    1x,
+                        ./images/portfolio/portfolio-img-6-md@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-6-sm.jpg    1x,
+                        ./images/portfolio/portfolio-img-6-sm@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="projects__img"
+                      src="./images/portfolio/portfolio-img-6-sm.jpg"
+                      alt="Веб-сайт"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <p class="projects__list-overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -222,13 +436,37 @@
             <li class="projects__list-card">
               <a class="projects__list-item" href="#!">
                 <div class="projects__img-wrapper">
-                  <img
-                    class="projects__img"
-                    src="./images/portfolio-img-7.jpg"
-                    alt="Дизайн"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-7-lg.jpg    1x,
+                        ./images/portfolio/portfolio-img-7-lg@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-7-md.jpg    1x,
+                        ./images/portfolio/portfolio-img-7-md@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-7-sm.jpg    1x,
+                        ./images/portfolio/portfolio-img-7-sm@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="projects__img"
+                      src="./images/portfolio/portfolio-img-7-sm.jpg"
+                      alt="Дизайн"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <p class="projects__list-overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -245,13 +483,37 @@
             <li class="projects__list-card">
               <a class="projects__list-item" href="#!">
                 <div class="projects__img-wrapper">
-                  <img
-                    class="projects__img"
-                    src="./images/portfolio-img-8.jpg"
-                    alt="Маркетинг"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-8-lg.jpg    1x,
+                        ./images/portfolio/portfolio-img-8-lg@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-8-md.jpg    1x,
+                        ./images/portfolio/portfolio-img-8-md@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-8-sm.jpg    1x,
+                        ./images/portfolio/portfolio-img-8-sm@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="projects__img"
+                      src="./images/portfolio/portfolio-img-8-sm.jpg"
+                      alt="Маркетинг"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <p class="projects__list-overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -268,13 +530,37 @@
             <li class="projects__list-card">
               <a class="projects__list-item" href="#!">
                 <div class="projects__img-wrapper">
-                  <img
-                    class="projects__img"
-                    src="./images/portfolio-img-9.jpg"
-                    alt="Приложение"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-9-lg.jpg    1x,
+                        ./images/portfolio/portfolio-img-9-lg@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-9-md.jpg    1x,
+                        ./images/portfolio/portfolio-img-9-md@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio-img-9-sm.jpg    1x,
+                        ./images/portfolio/portfolio-img-9-sm@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="projects__img"
+                      src="./images/portfolio/portfolio-img-9-sm.jpg"
+                      alt="Приложение"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <p class="projects__list-overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -322,7 +608,7 @@
         <div class="footer__action">
           <h2 class="footer__action-title">Присоединяйтесь</h2>
           <ul class="social social--white">
-            <li>
+            <li class="social__wrapper">
               <a class="social__link social__link--white" href="#!" aria-label="Инстаграм">
                 <svg class="social__link-icon" width="20" height="20">
                   <use href="./images/symbol-defs.svg#icon-instagram" />
@@ -330,7 +616,7 @@
               </a>
             </li>
 
-            <li>
+            <li class="social__wrapper">
               <a class="social__link social__link--white" href="#!" aria-label="Твиттер">
                 <svg class="social__link-icon" width="20" height="20">
                   <use href="./images/symbol-defs.svg#icon-twitter" />
@@ -338,7 +624,7 @@
               </a>
             </li>
 
-            <li>
+            <li class="social__wrapper">
               <a class="social__link social__link--white" href="#!" aria-label="Фейсбук">
                 <svg class="social__link-icon" width="20" height="20">
                   <use href="./images/symbol-defs.svg#icon-facebook" />
@@ -346,7 +632,7 @@
               </a>
             </li>
 
-            <li>
+            <li class="social__wrapper">
               <a class="social__link social__link--white" href="#!" aria-label="Линкедин">
                 <svg class="social__link-icon" width="20" height="20">
                   <use href="./images/symbol-defs.svg#icon-linkedin" />
@@ -370,5 +656,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

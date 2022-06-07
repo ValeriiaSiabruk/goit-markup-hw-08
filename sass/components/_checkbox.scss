@@ -4,6 +4,10 @@
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 30px;
+
+  @media screen and (max-width: $screen-sm-max) {
+    align-items: start;
+  }
 }
 
 .checkbox__input {
@@ -47,12 +51,26 @@
 }
 
 .checkbox__text {
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 1.167;
   letter-spacing: 0.03em;
+  color: var(--gray);
+
+  @media screen and (max-width: $screen-sm-max) {
+    width: 235px;
+  }
 
   a {
     color: var(--blue);
     text-decoration: underline;
+  }
+
+  @media screen and (max-width: $screen-sm-max) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: $screen-lg-max) {
+    font-size: 14px;
+    line-height: 1.5;
   }
 }

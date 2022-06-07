@@ -16,6 +16,76 @@
       <div class="container header__container">
         <nav class="header__navigation">
           <a class="logo" href="./index.html"><span>Web</span>Studio</a>
+          <button
+            class="burger__button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="burger__container"
+            data-menu-button
+          >
+            <svg
+              class="burger__icons"
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use class="burger__icon-menu" href="./images/symbol-defs.svg#icon-menu-burger" />
+              <use
+                class="burger__icon-cross"
+                href="./images/symbol-defs.svg#icon-menu-burger-cross"
+              />
+            </svg>
+          </button>
+          <div class="burger__container" id="burger__container" data-menu>
+            <ul class="burger__navigation">
+              <li class="burger__navigation-item">
+                <a
+                  class="burger__navigation-link burger__navigation-link--current"
+                  href="./index.html"
+                  >Студия</a
+                >
+              </li>
+
+              <li class="burger__navigation-item">
+                <a class="burger__navigation-link" href="./portfolio.html">Портфолио</a>
+              </li>
+
+              <li class="burger__navigation-item">
+                <a href="#" class="burger__navigation-link">Контакты</a>
+              </li>
+            </ul>
+
+            <ul class="burger__contacts">
+              <li class="burger__contacts-item">
+                <a class="burger__contacts-phone" href="tel:+380961111111">+38 096 111 11 11</a>
+              </li>
+
+              <li class="burger__contacts-item">
+                <a class="burger__contacts-mail" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+
+            <ul class="burger__social">
+              <li class="burger__social-wrapper">
+                <a class="burger__social-link" href="#!" aria-label="Инстаграм"> Instagram </a>
+              </li>
+
+              <li class="burger__social-wrapper">
+                <a class="burger__social-link" href="#!" aria-label="Твиттер"> Twitter </a>
+              </li>
+
+              <li class="burger__social-wrapper">
+                <a class="burger__social-link" href="#!" aria-label="Фейсбук"> Facebook </a>
+              </li>
+
+              <li class="burger__social-wrapper">
+                <a class="burger__social-link" href="#!" aria-label="Линкедин"> LinkedIn </a>
+              </li>
+            </ul>
+          </div>
+
           <ul class="header__navigation-list">
             <li class="header__navigation-item">
               <a
@@ -24,9 +94,11 @@
                 >Студия</a
               >
             </li>
+
             <li class="header__navigation-item">
               <a class="header__navigation-link" href="./portfolio.html">Портфолио</a>
             </li>
+
             <li class="header__navigation-item">
               <a href="#" class="header__navigation-link">Контакты</a>
             </li>
@@ -123,35 +195,68 @@
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="services__list">
             <li class="services__list-item">
-              <img
-                class="services__list-img"
-                src="./images/service-img-1.jpg"
-                alt="Десктопные приложения"
-                width="370"
-                height="294"
-              />
+              <div class="services__img-wrapper">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/service/service-img-1-lg.jpg    1x,
+                      ./images/service/service-img-1-lg@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="services__list-img"
+                    src="./images/service-img-1-lg.jpg"
+                    alt="Десктопные приложения"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
+              </div>
               <h2 class="services__list-text">Десктопные приложения</h2>
             </li>
 
             <li class="services__list-item">
-              <img
-                class="services__list-img"
-                src="./images/service-img-2.jpg"
-                alt="Мобильные приложения"
-                width="370"
-                height="294"
-              />
+              <div class="services__img-wrapper">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/service/service-img-2-lg.jpg    1x,
+                      ./images/service/service-img-2-lg@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="services__list-img"
+                    src="./images/service-img-2-lg.jpg"
+                    alt="Мобильные приложения"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
+              </div>
               <h2 class="services__list-text">Мобильные приложения</h2>
             </li>
 
             <li class="services__list-item">
-              <img
-                class="services__list-img"
-                src="./images/service-img-3.jpg"
-                alt="Дизайнерские решения"
-                width="370"
-                height="294"
-              />
+              <div class="services__img-wrapper">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/service/service-img-3-lg.jpg    1x,
+                      ./images/service/service-img-3-lg@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="services__list-img"
+                    src="./images/service-img-3-lg.jpg"
+                    alt="Дизайнерские решения"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
+              </div>
               <h2 class="services__list-text">Дизайнерские решения</h2>
             </li>
           </ul>
@@ -163,18 +268,44 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__card">
-              <img
-                class="team__card-image"
-                src="./images/team-avatar-1.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-                height="260"
-              />
+              <div class="team__img-wrapper">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/team-avatar-1-lg.jpg    1x,
+                      ./images/team/team-avatar-1-lg@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/team-avatar-1-md.jpg    1x,
+                      ./images/team/team-avatar-1-md@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/team-avatar-1-sm.jpg    1x,
+                      ./images/team/team-avatar-1-sm@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="team__card-image"
+                    src="./images/team/team-avatar-1-sm.jpg"
+                    alt="Игорь Демьяненко"
+                    width="450"
+                    height="460"
+                  />
+                </picture>
+              </div>
+
               <div class="team__card-text">
                 <h3 class="team__card-title">Игорь Демьяненко</h3>
                 <p class="team__card-description">Product Designer</p>
                 <ul class="social">
-                  <li>
+                  <li class="social__wrapper">
                     <a class="social__link" href="#!" aria-label="Инстаграм">
                       <svg class="social__link-icon" width="20" height="20">
                         <use href="./images/symbol-defs.svg#icon-instagram" />
@@ -182,7 +313,7 @@
                     </a>
                   </li>
 
-                  <li>
+                  <li class="social__wrapper">
                     <a class="social__link" href="#!" aria-label="Твиттер">
                       <svg class="social__link-icon" width="20" height="20">
                         <use href="./images/symbol-defs.svg#icon-twitter" />
@@ -190,7 +321,7 @@
                     </a>
                   </li>
 
-                  <li>
+                  <li class="social__wrapper">
                     <a class="social__link" href="#!" aria-label="Фейсбук">
                       <svg class="social__link-icon" width="20" height="20">
                         <use href="./images/symbol-defs.svg#icon-facebook" />
@@ -198,7 +329,7 @@
                     </a>
                   </li>
 
-                  <li>
+                  <li class="social__wrapper">
                     <a class="social__link" href="#!" aria-label="Линкедин">
                       <svg class="social__link-icon" width="20" height="20">
                         <use href="./images/symbol-defs.svg#icon-linkedin" />
@@ -210,18 +341,43 @@
             </li>
 
             <li class="team__card">
-              <img
-                class="team__card-image"
-                src="./images/team-avatar-2.jpg"
-                alt="Ольга Репина"
-                width="270"
-                height="260"
-              />
+              <div class="team__img-wrapper">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/team-avatar-2-lg.jpg    1x,
+                      ./images/team/team-avatar-2-lg@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/team-avatar-2-md.jpg    1x,
+                      ./images/team/team-avatar-2-md@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/team-avatar-2-sm.jpg    1x,
+                      ./images/team/team-avatar-2-sm@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="team__card-image"
+                    src="./images/team/team-avatar-2-sm.jpg"
+                    alt="Ольга Репина"
+                    width="450"
+                    height="460"
+                  />
+                </picture>
+              </div>
               <div class="team__card-text">
                 <h3 class="team__card-title">Ольга Репина</h3>
                 <p class="team__card-description">Frontend Developer</p>
                 <ul class="social">
-                  <li>
+                  <li class="social__wrapper">
                     <a class="social__link" href="#!" aria-label="Инстаграм">
                       <svg class="social__link-icon" width="20" height="20">
                         <use href="./images/symbol-defs.svg#icon-instagram" />
@@ -229,7 +385,7 @@
                     </a>
                   </li>
 
-                  <li>
+                  <li class="social__wrapper">
                     <a class="social__link" href="#!" aria-label="Твиттер">
                       <svg class="social__link-icon" width="20" height="20">
                         <use href="./images/symbol-defs.svg#icon-twitter" />
@@ -237,7 +393,7 @@
                     </a>
                   </li>
 
-                  <li>
+                  <li class="social__wrapper">
                     <a class="social__link" href="#!" aria-label="Фейсбук">
                       <svg class="social__link-icon" width="20" height="20">
                         <use href="./images/symbol-defs.svg#icon-facebook" />
@@ -245,7 +401,7 @@
                     </a>
                   </li>
 
-                  <li>
+                  <li class="social__wrapper">
                     <a class="social__link" href="#!" aria-label="Линкедин">
                       <svg class="social__link-icon" width="20" height="20">
                         <use href="./images/symbol-defs.svg#icon-linkedin" />
@@ -257,18 +413,44 @@
             </li>
 
             <li class="team__card">
-              <img
-                class="team__card-image"
-                src="./images/team-avatar-3.jpg"
-                alt="Николай Тарасов"
-                width="270"
-                height="260"
-              />
+              <div class="team__img-wrapper">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/team-avatar-3-lg.jpg    1x,
+                      ./images/team/team-avatar-3-lg@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/team-avatar-3-md.jpg    1x,
+                      ./images/team/team-avatar-3-md@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/team-avatar-3-sm.jpg    1x,
+                      ./images/team/team-avatar-3-sm@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="team__card-image"
+                    src="./images/team/team-avatar-3-sm.jpg"
+                    alt="Николай Тарасов"
+                    width="450"
+                    height="460"
+                  />
+                </picture>
+              </div>
+
               <div class="team__card-text">
                 <h3 class="team__card-title">Николай Тарасов</h3>
                 <p class="team__card-description">Marketing</p>
                 <ul class="social">
-                  <li>
+                  <li class="social__wrapper">
                     <a class="social__link" href="#!" aria-label="Инстаграм">
                       <svg class="social__link-icon" width="20" height="20">
                         <use href="./images/symbol-defs.svg#icon-instagram" />
@@ -276,7 +458,7 @@
                     </a>
                   </li>
 
-                  <li>
+                  <li class="social__wrapper">
                     <a class="social__link" href="#!" aria-label="Твиттер">
                       <svg class="social__link-icon" width="20" height="20">
                         <use href="./images/symbol-defs.svg#icon-twitter" />
@@ -284,7 +466,7 @@
                     </a>
                   </li>
 
-                  <li>
+                  <li class="social__wrapper">
                     <a class="social__link" href="#!" aria-label="Фейсбук">
                       <svg class="social__link-icon" width="20" height="20">
                         <use href="./images/symbol-defs.svg#icon-facebook" />
@@ -292,7 +474,7 @@
                     </a>
                   </li>
 
-                  <li>
+                  <li class="social__wrapper">
                     <a class="social__link" href="#!" aria-label="Линкедин">
                       <svg class="social__link-icon" width="20" height="20">
                         <use href="./images/symbol-defs.svg#icon-linkedin" />
@@ -304,18 +486,44 @@
             </li>
 
             <li class="team__card">
-              <img
-                class="team__card-image"
-                src="./images/team-avatar-4.jpg"
-                alt="Михаил Ермаков"
-                width="270"
-                height="260"
-              />
+              <div class="team__img-wrapper">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/team-avatar-4-lg.jpg    1x,
+                      ./images/team/team-avatar-4-lg@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/team-avatar-4-md.jpg    1x,
+                      ./images/team/team-avatar-4-md@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/team-avatar-4-sm.jpg    1x,
+                      ./images/team/team-avatar-4-sm@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="team__card-image"
+                    src="./images/team/team-avatar-4-sm.jpg"
+                    alt="Михаил Ермаков"
+                    width="450"
+                    height="460"
+                  />
+                </picture>
+              </div>
+
               <div class="team__card-text">
                 <h3 class="team__card-title">Михаил Ермаков</h3>
                 <p class="team__card-description">UI Designer</p>
                 <ul class="social">
-                  <li>
+                  <li class="social__wrapper">
                     <a class="social__link" href="#!" aria-label="Инстаграм">
                       <svg class="social__link-icon" width="20" height="20">
                         <use href="./images/symbol-defs.svg#icon-instagram" />
@@ -323,7 +531,7 @@
                     </a>
                   </li>
 
-                  <li>
+                  <li class="social__wrapper">
                     <a class="social__link" href="#!" aria-label="Твиттер">
                       <svg class="social__link-icon" width="20" height="20">
                         <use href="./images/symbol-defs.svg#icon-twitter" />
@@ -331,7 +539,7 @@
                     </a>
                   </li>
 
-                  <li>
+                  <li class="social__wrapper">
                     <a class="social__link" href="#!" aria-label="Фейсбук">
                       <svg class="social__link-icon" width="20" height="20">
                         <use href="./images/symbol-defs.svg#icon-facebook" />
@@ -339,7 +547,7 @@
                     </a>
                   </li>
 
-                  <li>
+                  <li class="social__wrapper">
                     <a class="social__link" href="#!" aria-label="Линкедин">
                       <svg class="social__link-icon" width="20" height="20">
                         <use href="./images/symbol-defs.svg#icon-linkedin" />
@@ -357,7 +565,7 @@
         <div class="container">
           <h2 class="section__title">Постоянные клиенты</h2>
           <ul class="clients__list">
-            <li>
+            <li class="clients__item">
               <a href="#!" class="clients__link" aria-label="Первая компания">
                 <svg class="clients__icon" width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-logo-1" />
@@ -365,7 +573,7 @@
               </a>
             </li>
 
-            <li>
+            <li class="clients__item">
               <a href="#!" class="clients__link" aria-label="Вторая компания">
                 <svg class="clients__icon" width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-logo-2" />
@@ -373,7 +581,7 @@
               </a>
             </li>
 
-            <li>
+            <li class="clients__item">
               <a href="#!" class="clients__link" aria-label="Третья компания">
                 <svg class="clients__icon" width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-logo-3" />
@@ -381,7 +589,7 @@
               </a>
             </li>
 
-            <li>
+            <li class="clients__item">
               <a href="#!" class="clients__link" aria-label="Четвёртая компания">
                 <svg class="clients__icon" width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-logo-4" />
@@ -389,7 +597,7 @@
               </a>
             </li>
 
-            <li>
+            <li class="clients__item">
               <a href="#!" class="clients__link" aria-label="Пятая компания">
                 <svg class="clients__icon" width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-logo-5" />
@@ -397,7 +605,7 @@
               </a>
             </li>
 
-            <li>
+            <li class="clients__item">
               <a href="#!" class="clients__link" aria-label="Шестая компания">
                 <svg class="clients__icon" width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-logo-6" />
@@ -439,7 +647,7 @@
         <div class="footer__action">
           <h2 class="footer__action-title">Присоединяйтесь</h2>
           <ul class="social social--white">
-            <li>
+            <li class="social__wrapper">
               <a class="social__link social__link--white" href="#!" aria-label="Инстаграм">
                 <svg class="social__link-icon" width="20" height="20">
                   <use href="./images/symbol-defs.svg#icon-instagram" />
@@ -447,7 +655,7 @@
               </a>
             </li>
 
-            <li>
+            <li class="social__wrapper">
               <a class="social__link social__link--white" href="#!" aria-label="Твиттер">
                 <svg class="social__link-icon" width="20" height="20">
                   <use href="./images/symbol-defs.svg#icon-twitter" />
@@ -455,7 +663,7 @@
               </a>
             </li>
 
-            <li>
+            <li class="social__wrapper">
               <a class="social__link social__link--white" href="#!" aria-label="Фейсбук">
                 <svg class="social__link-icon" width="20" height="20">
                   <use href="./images/symbol-defs.svg#icon-facebook" />
@@ -463,7 +671,7 @@
               </a>
             </li>
 
-            <li>
+            <li class="social__wrapper">
               <a class="social__link social__link--white" href="#!" aria-label="Линкедин">
                 <svg class="social__link-icon" width="20" height="20">
                   <use href="./images/symbol-defs.svg#icon-linkedin" />
@@ -548,5 +756,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
