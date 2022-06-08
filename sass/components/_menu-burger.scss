@@ -60,7 +60,7 @@
 }
 
 .burger__navigation {
-  flex-basis: 100%;
+  flex-basis: 65%;
   font-weight: 500;
   font-size: 40px;
   line-height: 47px;
@@ -146,7 +146,7 @@
   }
 }
 
-.burger__social-wrapper:not(:last-child):after {
+.burger__social-wrapper:not(:last-child)::after {
   content: '';
   display: block;
   width: 1px;
